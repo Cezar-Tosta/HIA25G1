@@ -74,7 +74,9 @@ fake_users_db = {
     "admin": {
         "username": "admin",
         "full_name": "Administrator",
-        "hashed_password": "$argon2id$v=19$m=65536,t=3,p=4$mpMy5nzP2Ruj1Lp3zjmHEA$xA5W67SPnsIrLNup/leB8K6EYZo2UY+OuSTPu9r5UUY",
+        "hashed_password": "$argon2id$v=19$m=65536,t=3,p=4$Qyil1Nobw7i3FoJQyjmHEA$s6uCjiS3Gz7zRlwKRaydg53fxJ7hVaJXlpgXKTOrcug",
         "disabled": False,
     }
 }
+# "hashed_password2": "$argon2id$v=19$m=65536,t=3,p=4$mpMy5nzP2Ruj1Lp3zjmHEA$xA5W67SPnsIrLNup/leB8K6EYZo2UY+OuSTPu9r5UUY",
+        
