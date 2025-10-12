@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 import uuid
 from datetime import datetime
+from fastapi.responses import FileResponse
 
 from crewai import Crew, Task, Process
 from agentes_chatbot import (
@@ -304,16 +305,7 @@ async def health():
 @app.get("/")
 async def root():
     """Informações da API"""
-    return {
-        "message": "Chatbot Inteligente para Gestão de Saúde",
-        "version": "1.0.0",
-        "docs": "/docs",
-        "endpoints": {
-            "chat": "/chat",
-            "sessions": "/sessions",
-            "health": "/health"
-        }
-    }
+    return FileResponse('index.html')
 
 
 @app.get("/predict_noshow/{patient_id}")
