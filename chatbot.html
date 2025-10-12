@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Inteligente - Gestão de Saúde</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            height: 90vh;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* ==================== SIDEBAR ==================== */
+        
+        .sidebar {
+            width: 340px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .sidebar-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .sidebar-header h2 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        /* SCROLL NA SIDEBAR */
+        .sidebar-content {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        /* Scrollbar customizada para sidebar */
+        .sidebar-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .sidebar-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .sidebar-content::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 3px;
+        }
+
+        .sidebar-content::-webkit-scrollbar-thumb:hover {
+            background: #764ba2;
+        }
+
+        .menu-section {
+            padding: 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .menu-section h3 {
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .menu-button {
+            width: 100%;
+            padding: 12px 16px;
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .menu-button:hover {
+            background: #f8f9fa;
+            border-color: #667eea;
+            transform: translateX(4px);
+        }
+
+        .menu-button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+        }
+
+        .menu-button .icon {
+            font-size: 20px;
+        }
+
+        /* ==================== PREDICTION PANEL ==================== */
+
+        .prediction-panel {
+            padding: 20px;
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+
+        .prediction-panel.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        /* NOVOS ESTILOS PARA INTERVALO DE DATAS */
+        .date-range-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .date-range-group .form-group {
+            margin-bottom: 0;
+        }
+
+        .date-range-label {
+            grid-column: 1 / -1;
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        .predict-button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-top: 12px;
+        }
+
+        .predict-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .predict-button:active {
+            transform: translateY(0);
+        }
+
+        .result-box {
+            margin-top: 16px;
+            padding: 16px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            display: none;
+        }
+
+        .result-box.active {
+            display: block;
+        }
+
+        .result-box .probability {
+            font-size: 32px;
+            font-weight: bold;
+            color: #667eea;
+            margin: 8px 0;
+        }
+
+        .result-box .risk-level {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .risk-high {
+            background: #fee;
+            color: #c00;
+        }
+
+        .risk-medium {
+            background: #ffeaa7;
+            color: #d63031;
+        }
+
+        .risk-low {
+            background: #dfe;
+            color: #0a0;
+        }
+
+        .info-box {
+            margin-top: 16px;
+            padding: 12px;
+            background: #e7f3ff;
+            border-radius: 8px;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .info-box strong {
+            color: #667eea;
+        }
+
+        /* ==================== CHAT CONTAINER ==================== */
+
+        .chat-container {
+            flex: 1;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .chat-header .status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        .message {
+            margin-bottom: 16px;
+            display: flex;
+            gap: 12px;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message.user {
+            flex-direction: row-reverse;
+        }
+
+        .message-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .message.user .message-avatar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .message.assistant .message-avatar {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .message.user .message-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+
+        .message.assistant .message-content {
+            background: white;
+            color: #333;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-bottom-left-radius: 4px;
+        }
+
+        .message-meta {
+            font-size: 11px;
+            color: #999;
+            margin-top: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .agent-badge {
+            background: #667eea;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+        }
+
+        .chat-input-area {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .input-wrapper {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 24px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .chat-input:focus {
+            border-color: #667eea;
+        }
+
+        .send-button {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .send-button:hover {
+            transform: scale(1.1);
+        }
+
+        .send-button:active {
+            transform: scale(0.95);
+        }
+
+        .send-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .typing-indicator {
+            display: none;
+            padding: 12px 16px;
+            background: white;
+            border-radius: 18px;
+            width: fit-content;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .typing-indicator.active {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: #667eea;
+            border-radius: 50%;
+            animation: typing 1.4s infinite;
+        }
+
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+        }
+
+        .welcome-message {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+        }
+
+        .welcome-message h2 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .welcome-message p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Scrollbar customizada para chat */
+        .chat-messages::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .chat-messages::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .chat-messages::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 4px;
+        }
+
+        .chat-messages::-webkit-scrollbar-thumb:hover {
+            background: #764ba2;
+        }
+
+        /* Loading spinner */
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                max-height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- ==================== SIDEBAR ==================== -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>⚡ Ações Rápidas</h2>
+        </div>
+
+        <!-- CONTEÚDO COM SCROLL -->
+        <div class="sidebar-content">
+            <!-- Menu de Navegação -->
+            <div class="menu-section">
+                <h3>Predições</h3>
+                <button class="menu-button" onclick="showPanel('individual')">
+                    <span class="icon">👤</span>
+                    <span>Predição Individual</span>
+                </button>
+                <button class="menu-button" onclick="showPanel('lote')">
+                    <span class="icon">📊</span>
+                    <span>Predição em Lote</span>
+                </button>
+            </div>
+
+            <!-- ==================== PAINEL: PREDIÇÃO INDIVIDUAL ==================== -->
+            <div class="prediction-panel" id="panelIndividual">
+                <h3 style="margin-bottom: 16px;">🎯 Predição Individual</h3>
+                
+                <div class="form-group">
+                    <label>ID do Paciente</label>
+                    <input type="number" id="patientId" placeholder="Ex: 1234" min="1">
+                </div>
+
+                <div class="info-box">
+                    💡 <strong>Dica:</strong> Digite o ID do paciente e clique em "Analisar" para obter uma análise completa do risco de no-show com recomendações personalizadas.
+                </div>
+
+                <button class="predict-button" onclick="predictIndividual()">
+                    🔍 Analisar Paciente
+                </button>
+
+                <div class="result-box" id="resultIndividual">
+                    <div style="font-size: 13px; color: #666;">Probabilidade de Falta:</div>
+                    <div class="probability" id="probIndividual">--</div>
+                    <div class="risk-level" id="riskIndividual">--</div>
+                </div>
+            </div>
+
+            <!-- ==================== PAINEL: PREDIÇÃO EM LOTE ==================== -->
+            <div class="prediction-panel" id="panelLote">
+                <h3 style="margin-bottom: 16px;">📅 Predição em Lote</h3>
+                
+                <div class="form-group">
+                    <label class="date-range-label">Período de Análise</label>
+                    <div class="date-range-group">
+                        <div class="form-group">
+                            <label style="font-size: 11px; color: #888;">Data Inicial</label>
+                            <input type="date" id="batchDateStart">
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size: 11px; color: #888;">Data Final</label>
+                            <input type="date" id="batchDateEnd">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    💡 <strong>Dica:</strong> Selecione um período (ex: próxima semana) para analisar todos os pacientes agendados e receber um plano de ação detalhado com timeline, recursos necessários e ROI esperado.
+                </div>
+
+                <button class="predict-button" onclick="predictBatch()">
+                    📊 Analisar Período
+                </button>
+
+                <div class="result-box" id="resultLote">
+                    <div style="font-size: 13px; color: #666;">Taxa Média Prevista:</div>
+                    <div class="probability" id="probLote">--</div>
+                    <div style="font-size: 12px; color: #666; margin-top: 8px;" id="infoLote"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== CHAT CONTAINER ==================== -->
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>🏥 Assistente Inteligente de Saúde</h1>
+            <div class="status">
+                <div class="status-dot"></div>
+                <span>Online</span>
+            </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="welcome-message">
+                <h2>👋 Olá! Como posso ajudar?</h2>
+                <p>Sou seu assistente inteligente para gestão de saúde.<br>
+                Use o menu lateral para predições rápidas ou converse livremente comigo.</p>
+            </div>
+
+            <!-- Typing indicator -->
+            <div class="message assistant">
+                <div class="message-avatar">🤖</div>
+                <div class="typing-indicator" id="typingIndicator">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    class="chat-input" 
+                    id="messageInput" 
+                    placeholder="Digite sua mensagem..."
+                    autocomplete="off"
+                >
+                <button class="send-button" id="sendButton" onclick="sendMessage()">
+                    ➤
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const API_URL = 'http://127.0.0.1:8000';
+    let sessionId = null;
+
+    // Elementos
+    const chatMessages = document.getElementById('chatMessages');
+    const messageInput = document.getElementById('messageInput');
+    const sendButton = document.getElementById('sendButton');
+    const typingIndicator = document.getElementById('typingIndicator');
+
+    // ==================== GERENCIAMENTO DE PAINÉIS ====================
+
+    function showPanel(panelName) {
+        // Remover active de todos os botões
+        document.querySelectorAll('.menu-button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // Ocultar todos os painéis
+        document.querySelectorAll('.prediction-panel').forEach(panel => {
+            panel.classList.remove('active');
+        });
+
+        // Ativar botão e painel selecionado
+        if (panelName !== 'chat') {
+            const panels = {
+                'individual': 'panelIndividual',
+                'lote': 'panelLote'
+            };
+            
+            document.getElementById(panels[panelName]).classList.add('active');
+            event.target.closest('.menu-button').classList.add('active');
+        }
+    }
+
+    // ==================== PREDIÇÃO INDIVIDUAL ====================
+
+    async function predictIndividual() {
+        const patientId = document.getElementById('patientId').value;
+
+        if (!patientId) {
+            alert('Por favor, digite o ID do paciente');
+            return;
+        }
+
+        // Mostrar loading
+        document.getElementById('probIndividual').innerHTML = '<div class="spinner"></div>';
+        document.getElementById('resultIndividual').classList.add('active');
+
+        try {
+            // Chamar API de predição
+            const response = await fetch(`${API_URL}/predict_noshow/${patientId}`);
+            const data = await response.json();
+
+            if (data.error) {
+                throw new Error(data.error);
+            }
+
+            // Exibir resultado
+            const prob = (data.probabilidade * 100).toFixed(1);
+            document.getElementById('probIndividual').textContent = `${prob}%`;
+
+            // Classificar risco
+            let riskClass, riskText;
+            if (data.probabilidade >= 0.6) {
+                riskClass = 'risk-high';
+                riskText = '🔴 RISCO ALTO';
+            } else if (data.probabilidade >= 0.3) {
+                riskClass = 'risk-medium';
+                riskText = '🟡 RISCO MÉDIO';
+            } else {
+                riskClass = 'risk-low';
+                riskText = '🟢 RISCO BAIXO';
+            }
+
+            document.getElementById('riskIndividual').className = `risk-level ${riskClass}`;
+            document.getElementById('riskIndividual').textContent = riskText;
+
+            // Enviar para o chat com prompt otimizado
+            const prompt = gerarPromptIndividual(patientId, data);
+            await sendMessageToChat(prompt);
+
+        } catch (error) {
+            console.error('Erro:', error);
+            document.getElementById('probIndividual').textContent = 'Erro';
+            alert(`Erro ao analisar paciente: ${error.message}`);
+        }
+    }
+
+    // ==================== PREDIÇÃO EM LOTE ====================
+
+    async function predictBatch() {
+        const dateStart = document.getElementById('batchDateStart').value;
+        const dateEnd = document.getElementById('batchDateEnd').value;
+
+        if (!dateStart || !dateEnd) {
+            alert('Por favor, selecione o período completo');
+            return;
+        }
+
+        // Validar que data final >= data inicial
+        if (new Date(dateEnd) < new Date(dateStart)) {
+            alert('A data final deve ser posterior ou igual à data inicial');
+            return;
+        }
+
+        // Mostrar loading
+        document.getElementById('probLote').innerHTML = '<div class="spinner"></div>';
+        document.getElementById('resultLote').classList.add('active');
+
+        try {
+            // Chamar API de predição em lote (passando intervalo)
+            const response = await fetch(`${API_URL}/predict_noshow_batch?date_start=${dateStart}&date_end=${dateEnd}`);
+            const data = await response.json();
+
+            if (data.error) {
+                throw new Error(data.error);
+            }
+
+            // Exibir resultado
+            const taxaMedia = (data.taxa_media * 100).toFixed(1);
+            document.getElementById('probLote').textContent = `${taxaMedia}%`;
+            
+            const diasPeriodo = Math.ceil((new Date(dateEnd) - new Date(dateStart)) / (1000 * 60 * 60 * 24)) + 1;
+            document.getElementById('infoLote').textContent = 
+                `Período: ${diasPeriodo} dia(s) | Total: ${data.total_pacientes} pacientes | Alto risco: ${data.alto_risco}`;
+
+            // Enviar para o chat com prompt otimizado
+            const prompt = gerarPromptLote(dateStart, dateEnd, data);
+            await sendMessageToChat(prompt);
+
+        } catch (error) {
+            console.error('Erro:', error);
+            document.getElementById('probLote').textContent = 'Erro';
+            alert(`Erro ao analisar período: ${error.message}`);
+        }
+    }
+
+    // ==================== GERADORES DE PROMPTS ====================
+
+    function gerarPromptIndividual(patientId, data) {
+        return `
+📋 ANÁLISE DE RISCO DE NO-SHOW - PACIENTE #${patientId}
+
+DADOS DA PREDIÇÃO:
+- Probabilidade de falta: ${(data.probabilidade * 100).toFixed(1)}%
+- Nível de risco: ${data.probabilidade >= 0.6 ? 'ALTO' : data.probabilidade >= 0.3 ? 'MÉDIO' : 'BAIXO'}
+
+INFORMAÇÕES DO PACIENTE:
+${JSON.stringify(data.paciente_info, null, 2)}
+
+FATORES DE RISCO IDENTIFICADOS:
+${data.fatores_risco ? data.fatores_risco.join('\n') : 'N/A'}
+
+🎯 SOLICITAÇÃO:
+
+Por favor, analise este paciente e me forneça:
+
+1. **INTERPRETAÇÃO DO RISCO**: Explique o que significa essa probabilidade de ${(data.probabilidade * 100).toFixed(1)}% na prática
+
+2. **RECOMENDAÇÕES DE AÇÃO IMEDIATA**: Sugira ações específicas:
+   - Que tipo de contato fazer? (SMS, ligação, WhatsApp?)
+   - Quando fazer o contato? (48h antes? 24h?)
+   - Que mensagem enviar? (forneça um exemplo prático)
+   - Outras medidas preventivas?
+
+3. **PRIORIZAÇÃO**: Este paciente deve ser contatado com qual urgência?
+
+4. **CUSTO-BENEFÍCIO**: Vale a pena investir em intervenção? Justifique.
+
+Seja específico e acionável. A equipe precisa saber exatamente o que fazer.
+`;
+    }
+
+    function gerarPromptLote(dateStart, dateEnd, data) {
+        const diasPeriodo = Math.ceil((new Date(dateEnd) - new Date(dateStart)) / (1000 * 60 * 60 * 24)) + 1;
+        
+        return `
+📊 ANÁLISE DE RISCO DE NO-SHOW - PERÍODO: ${dateStart} a ${dateEnd}
+
+RESUMO GERAL:
+- Período: ${diasPeriodo} dia(s)
+- Total de pacientes agendados: ${data.total_pacientes}
+- Taxa média de no-show prevista: ${(data.taxa_media * 100).toFixed(1)}%
+- Pacientes de ALTO risco (>60%): ${data.alto_risco}
+- Pacientes de MÉDIO risco (30-60%): ${data.medio_risco}
+- Pacientes de BAIXO risco (<30%): ${data.baixo_risco}
+
+DISTRIBUIÇÃO POR ESPECIALIDADE:
+${JSON.stringify(data.por_especialidade, null, 2)}
+
+🎯 SOLICITAÇÃO:
+
+Crie um PLANO DE AÇÃO COMPLETO para este período:
+
+1. **AVALIAÇÃO GERAL**: A taxa de ${(data.taxa_media * 100).toFixed(1)}% é preocupante? Como se compara com a meta de 82% de comparecimento?
+
+2. **PRIORIZAÇÃO**: 
+   - Quantos pacientes contatar?
+   - Em que ordem?
+   - Que recursos alocar?
+
+3. **ESTRATÉGIA POR RISCO**:
+   - ALTO (${data.alto_risco} pac.): Que ações?
+   - MÉDIO (${data.medio_risco} pac.): Que ações?
+   - BAIXO (${data.baixo_risco} pac.): Necessário fazer algo?
+
+4. **TIMELINE**: Cronograma de execução dia a dia
+
+5. **OVERBOOKING**: Recomendar? Onde? Quanto?
+
+6. **IMPACTO FINANCEIRO**: 
+   - Perda esperada
+   - Economia com intervenções
+   - ROI
+
+7. **RECURSOS**: Pessoas, tempo e custo total
+
+Seja prático. A equipe precisa executar este plano HOJE.
+`;
+    }
+
+    // ==================== CHAT ====================
+
+    async function sendMessageToChat(message) {
+        addMessage('user', message);
+        
+        messageInput.disabled = true;
+        sendButton.disabled = true;
+        
+        typingIndicator.classList.add('active');
+        scrollToBottom();
+
+        try {
+            const response = await fetch(`${API_URL}/chat`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    message: message,
+                    session_id: sessionId
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error('Erro na comunicação com o servidor');
+            }
+
+            const data = await response.json();
+            
+            if (!sessionId) {
+                sessionId = data.session_id;
+            }
+
+            typingIndicator.classList.remove('active');
+            addMessage('assistant', data.response, data.agent_used);
+
+        } catch (error) {
+            console.error('Erro:', error);
+            typingIndicator.classList.remove('active');
+            addMessage('assistant', '❌ Desculpe, ocorreu um erro. Tente novamente.', 'Sistema');
+        } finally {
+            messageInput.disabled = false;
+            sendButton.disabled = false;
+            messageInput.focus();
+        }
+    }
+
+    async function sendMessage() {
+        const message = messageInput.value.trim();
+        
+        if (!message) return;
+
+        messageInput.value = '';
+        await sendMessageToChat(message);
+    }
+
+    messageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            sendMessage();
+        }
+    });
+
+    function addMessage(role, content, agent = null) {
+        const welcome = document.querySelector('.welcome-message');
+        if (welcome) {
+            welcome.remove();
+        }
+
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${role}`;
+
+        const avatar = document.createElement('div');
+        avatar.className = 'message-avatar';
+        avatar.textContent = role === 'user' ? '👤' : '🤖';
+
+        const contentDiv = document.createElement('div');
+        contentDiv.style.flex = '1';
+
+        const messageContent = document.createElement('div');
+        messageContent.className = 'message-content';
+        messageContent.textContent = content;
+
+        contentDiv.appendChild(messageContent);
+
+        if (role === 'assistant' && agent) {
+            const meta = document.createElement('div');
+            meta.className = 'message-meta';
+            meta.innerHTML = `
+                <span class="agent-badge">${agent}</span>
+                <span>${new Date().toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit'})}</span>
+            `;
+            contentDiv.appendChild(meta);
+        }
+
+        messageDiv.appendChild(avatar);
+        messageDiv.appendChild(contentDiv);
+
+        const typingMessage = typingIndicator.closest('.message');
+        chatMessages.insertBefore(messageDiv, typingMessage);
+
+        scrollToBottom();
+    }
+
+    function scrollToBottom() {
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    messageInput.focus();
+
+    // Definir datas padrão
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const nextWeek = new Date(today);
+    nextWeek.setDate(nextWeek.getDate() + 7);
+    
+    document.getElementById('batchDateStart').valueAsDate = tomorrow;
+    document.getElementById('batchDateEnd').valueAsDate = nextWeek;
+</script>
+
+</body>
+</html>

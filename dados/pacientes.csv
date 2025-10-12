@@ -1,0 +1,101 @@
+id_paciente,nome,idade,sexo,cidade,tem_diabetes,tem_hipertensao,plano_saude
+1,Paciente 1,39,M,Niterói,False,False,SUS
+2,Paciente 2,71,M,Niterói,False,False,SUS
+3,Paciente 3,65,F,Rio de Janeiro,False,True,SUS
+4,Paciente 4,71,M,Niterói,False,False,SUS
+5,Paciente 5,71,M,São Gonçalo,False,False,SUS
+6,Paciente 6,58,M,Niterói,False,True,SUS
+7,Paciente 7,62,F,Niterói,False,False,SUS
+8,Paciente 8,43,M,Rio de Janeiro,False,False,SUS
+9,Paciente 9,42,M,Rio de Janeiro,False,False,Privado
+10,Paciente 10,35,M,São Gonçalo,True,False,Privado
+11,Paciente 11,68,M,Rio de Janeiro,False,False,SUS
+12,Paciente 12,80,F,Niterói,False,True,Privado
+13,Paciente 13,81,F,Niterói,False,False,SUS
+14,Paciente 14,20,M,Rio de Janeiro,False,True,SUS
+15,Paciente 15,48,F,Rio de Janeiro,True,False,SUS
+16,Paciente 16,47,M,São Gonçalo,True,True,SUS
+17,Paciente 17,77,F,Rio de Janeiro,False,False,SUS
+18,Paciente 18,79,F,Rio de Janeiro,False,True,Privado
+19,Paciente 19,37,F,Niterói,False,True,SUS
+20,Paciente 20,39,F,São Gonçalo,False,False,SUS
+21,Paciente 21,34,M,Niterói,False,False,Privado
+22,Paciente 22,62,M,São Gonçalo,False,True,Privado
+23,Paciente 23,29,F,Rio de Janeiro,False,False,SUS
+24,Paciente 24,83,F,Rio de Janeiro,False,False,Privado
+25,Paciente 25,78,F,Niterói,False,False,SUS
+26,Paciente 26,21,M,Niterói,False,False,SUS
+27,Paciente 27,33,F,Niterói,False,False,SUS
+28,Paciente 28,31,M,Rio de Janeiro,False,False,Privado
+29,Paciente 29,28,M,São Gonçalo,False,False,SUS
+30,Paciente 30,78,F,Rio de Janeiro,False,False,SUS
+31,Paciente 31,29,M,Niterói,False,True,Privado
+32,Paciente 32,54,M,Niterói,False,False,SUS
+33,Paciente 33,27,F,Rio de Janeiro,False,False,SUS
+34,Paciente 34,58,F,Rio de Janeiro,False,False,Privado
+35,Paciente 35,79,M,Niterói,True,False,Privado
+36,Paciente 36,36,M,São Gonçalo,False,False,SUS
+37,Paciente 37,18,F,São Gonçalo,False,False,SUS
+38,Paciente 38,38,M,Rio de Janeiro,False,False,SUS
+39,Paciente 39,72,F,São Gonçalo,False,False,SUS
+40,Paciente 40,84,F,Rio de Janeiro,False,False,SUS
+41,Paciente 41,20,F,Rio de Janeiro,False,False,SUS
+42,Paciente 42,52,M,Rio de Janeiro,False,True,SUS
+43,Paciente 43,35,F,São Gonçalo,False,True,SUS
+44,Paciente 44,48,M,São Gonçalo,True,True,Privado
+45,Paciente 45,80,F,Rio de Janeiro,False,False,SUS
+46,Paciente 46,43,M,São Gonçalo,False,True,SUS
+47,Paciente 47,73,M,São Gonçalo,True,True,SUS
+48,Paciente 48,35,M,São Gonçalo,False,False,SUS
+49,Paciente 49,43,F,São Gonçalo,False,False,Privado
+50,Paciente 50,54,F,Rio de Janeiro,False,True,Privado
+51,Paciente 51,46,M,Niterói,False,False,SUS
+52,Paciente 52,50,M,São Gonçalo,False,False,Privado
+53,Paciente 53,23,M,São Gonçalo,False,False,SUS
+54,Paciente 54,52,F,Rio de Janeiro,False,False,Privado
+55,Paciente 55,76,F,Niterói,False,True,Privado
+56,Paciente 56,74,F,Rio de Janeiro,False,False,SUS
+57,Paciente 57,24,F,Niterói,False,False,SUS
+58,Paciente 58,70,M,Rio de Janeiro,False,True,SUS
+59,Paciente 59,29,F,Niterói,False,False,SUS
+60,Paciente 60,59,F,Rio de Janeiro,True,False,Privado
+61,Paciente 61,48,M,São Gonçalo,False,False,Privado
+62,Paciente 62,51,F,São Gonçalo,False,True,Privado
+63,Paciente 63,55,F,Niterói,False,False,SUS
+64,Paciente 64,56,M,Rio de Janeiro,True,False,SUS
+65,Paciente 65,57,M,São Gonçalo,False,False,SUS
+66,Paciente 66,20,M,Rio de Janeiro,False,True,SUS
+67,Paciente 67,25,M,Niterói,False,False,SUS
+68,Paciente 68,59,F,Rio de Janeiro,False,False,SUS
+69,Paciente 69,23,M,Niterói,False,True,SUS
+70,Paciente 70,60,F,Niterói,False,False,SUS
+71,Paciente 71,34,F,Niterói,False,False,SUS
+72,Paciente 72,64,F,Niterói,False,False,SUS
+73,Paciente 73,75,F,São Gonçalo,False,True,SUS
+74,Paciente 74,72,M,São Gonçalo,False,False,SUS
+75,Paciente 75,42,F,São Gonçalo,False,True,Privado
+76,Paciente 76,72,F,Rio de Janeiro,False,False,SUS
+77,Paciente 77,65,M,Niterói,False,True,Privado
+78,Paciente 78,45,M,Rio de Janeiro,False,False,SUS
+79,Paciente 79,58,M,Niterói,False,False,SUS
+80,Paciente 80,46,M,São Gonçalo,False,False,SUS
+81,Paciente 81,71,F,Rio de Janeiro,True,True,Privado
+82,Paciente 82,79,M,Niterói,False,True,SUS
+83,Paciente 83,74,M,Rio de Janeiro,False,False,SUS
+84,Paciente 84,74,M,Niterói,True,False,SUS
+85,Paciente 85,81,F,Rio de Janeiro,False,False,Privado
+86,Paciente 86,47,M,Niterói,False,False,SUS
+87,Paciente 87,24,F,Niterói,False,False,SUS
+88,Paciente 88,20,M,Niterói,False,True,Privado
+89,Paciente 89,69,M,São Gonçalo,False,False,Privado
+90,Paciente 90,77,F,Niterói,True,True,SUS
+91,Paciente 91,73,F,São Gonçalo,False,False,Privado
+92,Paciente 92,43,M,Rio de Janeiro,True,False,SUS
+93,Paciente 93,31,M,São Gonçalo,False,False,Privado
+94,Paciente 94,59,F,São Gonçalo,True,True,SUS
+95,Paciente 95,82,M,Rio de Janeiro,False,True,SUS
+96,Paciente 96,74,M,Niterói,False,False,Privado
+97,Paciente 97,44,M,Rio de Janeiro,False,False,SUS
+98,Paciente 98,35,M,Niterói,False,True,SUS
+99,Paciente 99,49,M,São Gonçalo,False,False,Privado
+100,Paciente 100,58,F,Niterói,False,False,Privado

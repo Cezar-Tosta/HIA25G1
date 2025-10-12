@@ -1,0 +1,16 @@
+[
+  {
+    "role": "user",
+    "content": "Olá",
+    "timestamp": "2025-10-12T02:13:12.101999",
+    "metadata": {}
+  },
+  {
+    "role": "assistant",
+    "content": "Olá! Como posso ajudar você hoje? Se tiver alguma dúvida ou precisar de informações específicas, fique à vontade para perguntar. Estou aqui para ajudar!",
+    "timestamp": "2025-10-12T02:13:34.564805",
+    "metadata": {
+      "agent": "Assistente de Pesquisa"
+    }
+  }
+]

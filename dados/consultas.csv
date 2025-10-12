@@ -1,0 +1,501 @@
+id_consulta,id_paciente,especialidade,data,status,custo
+1,67,Pediatria,2025-09-27,Remarcada,189.48
+2,24,Cardiologia,2025-08-24,Cancelada,125.21
+3,66,Pediatria,2025-07-28,Realizada,110.17
+4,9,Cardiologia,2025-08-10,Faltou,98.49
+5,22,Ortopedia,2025-07-30,Faltou,173.02
+6,5,Endocrinologia,2025-09-20,Faltou,95.94
+7,25,Endocrinologia,2025-08-21,Realizada,88.59
+8,8,Pediatria,2025-08-18,Realizada,174.74
+9,20,Cardiologia,2025-07-19,Faltou,146.18
+10,10,Clínica Geral,2025-09-18,Faltou,136.85
+11,68,Pediatria,2025-08-16,Remarcada,95.46
+12,24,Clínica Geral,2025-09-07,Faltou,160.91
+13,77,Endocrinologia,2025-10-04,Remarcada,120.12
+14,27,Ortopedia,2025-09-30,Faltou,194.61
+15,66,Cardiologia,2025-07-29,Remarcada,110.75
+16,87,Cardiologia,2025-09-14,Cancelada,188.58
+17,49,Cardiologia,2025-09-01,Faltou,150.97
+18,83,Endocrinologia,2025-10-08,Realizada,148.62
+19,40,Ortopedia,2025-10-06,Realizada,133.08
+20,6,Pediatria,2025-09-27,Remarcada,167.74
+21,10,Clínica Geral,2025-09-21,Faltou,151.94
+22,67,Clínica Geral,2025-08-06,Realizada,164.41
+23,27,Cardiologia,2025-07-17,Remarcada,116.13
+24,86,Clínica Geral,2025-07-16,Cancelada,88.49
+25,12,Clínica Geral,2025-07-19,Faltou,127.17
+26,99,Ortopedia,2025-07-20,Faltou,140.91
+27,50,Clínica Geral,2025-07-17,Faltou,186.91
+28,96,Cardiologia,2025-08-02,Cancelada,94.28
+29,95,Endocrinologia,2025-08-13,Remarcada,89.08
+30,45,Pediatria,2025-10-11,Realizada,151.2
+31,85,Endocrinologia,2025-08-21,Cancelada,130.43
+32,65,Ortopedia,2025-07-16,Faltou,114.84
+33,98,Ortopedia,2025-09-09,Cancelada,140.78
+34,51,Pediatria,2025-09-18,Remarcada,110.64
+35,19,Clínica Geral,2025-09-24,Cancelada,86.17
+36,45,Clínica Geral,2025-09-22,Cancelada,97.02
+37,45,Cardiologia,2025-09-01,Remarcada,166.75
+38,1,Ortopedia,2025-08-22,Realizada,173.39
+39,18,Clínica Geral,2025-07-31,Realizada,183.91
+40,54,Ortopedia,2025-07-18,Cancelada,182.43
+41,68,Clínica Geral,2025-09-30,Remarcada,153.07
+42,75,Cardiologia,2025-08-17,Realizada,116.16
+43,44,Endocrinologia,2025-07-20,Realizada,84.77
+44,24,Cardiologia,2025-08-16,Remarcada,184.94
+45,85,Ortopedia,2025-10-02,Remarcada,143.82
+46,52,Ortopedia,2025-08-15,Realizada,143.32
+47,39,Ortopedia,2025-10-03,Faltou,132.75
+48,84,Ortopedia,2025-09-15,Cancelada,147.52
+49,44,Clínica Geral,2025-08-01,Realizada,158.2
+50,84,Clínica Geral,2025-09-11,Faltou,159.47
+51,37,Clínica Geral,2025-07-16,Cancelada,128.68
+52,3,Ortopedia,2025-08-19,Cancelada,123.54
+53,82,Cardiologia,2025-09-26,Cancelada,198.95
+54,44,Clínica Geral,2025-09-20,Cancelada,98.78
+55,74,Cardiologia,2025-08-06,Cancelada,133.78
+56,14,Endocrinologia,2025-09-25,Realizada,185.09
+57,12,Clínica Geral,2025-07-23,Faltou,141.01
+58,45,Clínica Geral,2025-09-07,Faltou,99.51
+59,78,Endocrinologia,2025-09-10,Faltou,104.37
+60,79,Cardiologia,2025-09-19,Remarcada,186.11
+61,7,Pediatria,2025-09-23,Realizada,199.88
+62,42,Cardiologia,2025-09-01,Cancelada,176.37
+63,63,Ortopedia,2025-07-31,Remarcada,120.67
+64,32,Endocrinologia,2025-09-23,Realizada,179.1
+65,65,Endocrinologia,2025-09-28,Faltou,99.52
+66,11,Clínica Geral,2025-08-20,Remarcada,185.18
+67,9,Ortopedia,2025-08-30,Remarcada,109.93
+68,33,Endocrinologia,2025-08-19,Faltou,179.79
+69,84,Cardiologia,2025-07-21,Remarcada,119.71
+70,31,Clínica Geral,2025-08-06,Faltou,171.73
+71,36,Pediatria,2025-08-12,Cancelada,160.08
+72,9,Clínica Geral,2025-10-08,Realizada,101.33
+73,36,Pediatria,2025-08-12,Faltou,150.77
+74,87,Endocrinologia,2025-08-02,Faltou,107.91
+75,9,Clínica Geral,2025-08-02,Realizada,130.14
+76,84,Pediatria,2025-07-25,Realizada,113.32
+77,96,Pediatria,2025-09-11,Cancelada,113.61
+78,14,Ortopedia,2025-07-17,Realizada,165.87
+79,47,Ortopedia,2025-07-27,Realizada,170.26
+80,53,Clínica Geral,2025-10-05,Remarcada,173.56
+81,88,Ortopedia,2025-10-08,Remarcada,193.48
+82,92,Clínica Geral,2025-08-02,Remarcada,122.21
+83,45,Clínica Geral,2025-08-31,Cancelada,157.72
+84,25,Ortopedia,2025-10-02,Cancelada,114.24
+85,4,Clínica Geral,2025-09-27,Remarcada,146.21
+86,57,Pediatria,2025-08-02,Faltou,165.86
+87,40,Ortopedia,2025-09-27,Realizada,111.21
+88,21,Pediatria,2025-09-16,Cancelada,142.4
+89,25,Pediatria,2025-08-25,Remarcada,101.61
+90,60,Endocrinologia,2025-10-09,Cancelada,190.63
+91,93,Clínica Geral,2025-08-30,Cancelada,100.05
+92,77,Endocrinologia,2025-08-30,Faltou,123.5
+93,1,Endocrinologia,2025-09-07,Cancelada,86.74
+94,64,Endocrinologia,2025-10-05,Cancelada,87.17
+95,40,Pediatria,2025-08-30,Cancelada,175.14
+96,6,Cardiologia,2025-07-31,Cancelada,149.16
+97,40,Pediatria,2025-09-15,Remarcada,124.19
+98,38,Pediatria,2025-08-31,Remarcada,95.91
+99,7,Clínica Geral,2025-08-08,Faltou,197.98
+100,36,Endocrinologia,2025-07-15,Faltou,114.57
+101,13,Pediatria,2025-08-12,Faltou,110.9
+102,4,Endocrinologia,2025-07-16,Remarcada,137.84
+103,97,Ortopedia,2025-08-03,Realizada,133.68
+104,43,Clínica Geral,2025-09-14,Faltou,137.07
+105,100,Clínica Geral,2025-10-09,Realizada,182.7
+106,74,Endocrinologia,2025-07-28,Remarcada,193.2
+107,93,Endocrinologia,2025-09-02,Cancelada,144.8
+108,43,Endocrinologia,2025-09-01,Remarcada,183.03
+109,19,Ortopedia,2025-07-22,Remarcada,162.04
+110,28,Endocrinologia,2025-10-10,Cancelada,161.32
+111,95,Cardiologia,2025-10-02,Cancelada,159.18
+112,82,Clínica Geral,2025-08-01,Faltou,158.45
+113,8,Ortopedia,2025-08-23,Faltou,80.65
+114,90,Cardiologia,2025-09-18,Realizada,114.8
+115,39,Clínica Geral,2025-09-18,Remarcada,185.97
+116,2,Cardiologia,2025-08-11,Remarcada,162.78
+117,65,Clínica Geral,2025-10-10,Faltou,134.97
+118,32,Pediatria,2025-09-23,Cancelada,136.58
+119,67,Cardiologia,2025-08-16,Cancelada,194.69
+120,52,Clínica Geral,2025-07-23,Faltou,182.77
+121,38,Pediatria,2025-09-05,Cancelada,172.39
+122,78,Pediatria,2025-09-27,Realizada,83.77
+123,73,Endocrinologia,2025-07-31,Realizada,128.92
+124,59,Ortopedia,2025-09-05,Realizada,168.95
+125,36,Ortopedia,2025-08-17,Cancelada,98.5
+126,29,Pediatria,2025-09-08,Remarcada,130.35
+127,29,Clínica Geral,2025-08-19,Realizada,153.62
+128,31,Pediatria,2025-09-19,Realizada,95.49
+129,10,Pediatria,2025-07-14,Faltou,84.65
+130,63,Ortopedia,2025-10-08,Cancelada,112.97
+131,69,Cardiologia,2025-08-01,Cancelada,169.99
+132,34,Ortopedia,2025-09-06,Faltou,199.34
+133,73,Ortopedia,2025-10-09,Remarcada,156.99
+134,51,Clínica Geral,2025-07-28,Faltou,142.12
+135,27,Ortopedia,2025-10-06,Cancelada,87.74
+136,81,Ortopedia,2025-08-22,Realizada,122.77
+137,53,Pediatria,2025-09-11,Realizada,198.89
+138,24,Endocrinologia,2025-09-08,Cancelada,164.84
+139,24,Pediatria,2025-09-04,Realizada,121.04
+140,15,Cardiologia,2025-08-24,Faltou,157.72
+141,90,Ortopedia,2025-09-18,Cancelada,167.05
+142,85,Cardiologia,2025-07-16,Faltou,186.56
+143,41,Cardiologia,2025-08-10,Faltou,116.27
+144,87,Clínica Geral,2025-08-27,Realizada,184.91
+145,53,Ortopedia,2025-07-25,Faltou,163.83
+146,97,Endocrinologia,2025-09-30,Faltou,142.32
+147,44,Pediatria,2025-08-02,Remarcada,152.14
+148,90,Ortopedia,2025-09-20,Cancelada,155.02
+149,32,Ortopedia,2025-09-19,Cancelada,167.59
+150,6,Clínica Geral,2025-08-07,Realizada,93.26
+151,52,Cardiologia,2025-10-02,Faltou,112.38
+152,29,Pediatria,2025-08-24,Cancelada,199.26
+153,72,Pediatria,2025-09-25,Faltou,195.29
+154,18,Clínica Geral,2025-09-06,Faltou,150.98
+155,56,Clínica Geral,2025-08-25,Faltou,197.08
+156,19,Clínica Geral,2025-09-29,Faltou,173.39
+157,57,Clínica Geral,2025-07-16,Realizada,185.44
+158,1,Endocrinologia,2025-07-25,Realizada,125.21
+159,37,Pediatria,2025-10-01,Cancelada,198.05
+160,28,Cardiologia,2025-09-27,Remarcada,156.5
+161,51,Ortopedia,2025-09-19,Realizada,80.95
+162,16,Cardiologia,2025-09-09,Realizada,170.44
+163,18,Ortopedia,2025-08-20,Cancelada,171.74
+164,35,Cardiologia,2025-08-08,Remarcada,157.8
+165,9,Cardiologia,2025-09-24,Faltou,120.11
+166,61,Endocrinologia,2025-09-02,Remarcada,177.22
+167,28,Pediatria,2025-08-10,Remarcada,84.22
+168,4,Cardiologia,2025-08-09,Realizada,81.19
+169,66,Clínica Geral,2025-08-05,Faltou,122.34
+170,35,Pediatria,2025-09-06,Cancelada,135.34
+171,85,Endocrinologia,2025-08-25,Realizada,165.5
+172,62,Cardiologia,2025-09-18,Realizada,82.7
+173,13,Pediatria,2025-09-11,Remarcada,199.89
+174,11,Clínica Geral,2025-07-23,Realizada,101.25
+175,84,Endocrinologia,2025-08-06,Cancelada,86.51
+176,57,Ortopedia,2025-09-16,Cancelada,164.5
+177,98,Pediatria,2025-07-14,Cancelada,187.24
+178,18,Endocrinologia,2025-08-30,Remarcada,132.76
+179,29,Ortopedia,2025-10-01,Realizada,192.12
+180,61,Pediatria,2025-08-05,Remarcada,114.68
+181,86,Ortopedia,2025-07-23,Faltou,144.28
+182,98,Clínica Geral,2025-07-22,Remarcada,183.4
+183,31,Endocrinologia,2025-10-02,Faltou,127.83
+184,58,Endocrinologia,2025-08-09,Remarcada,197.54
+185,44,Endocrinologia,2025-07-22,Faltou,108.16
+186,60,Pediatria,2025-08-04,Realizada,108.45
+187,41,Cardiologia,2025-09-14,Remarcada,196.48
+188,44,Clínica Geral,2025-08-28,Realizada,137.35
+189,73,Ortopedia,2025-08-12,Realizada,101.04
+190,91,Clínica Geral,2025-10-01,Realizada,193.59
+191,26,Pediatria,2025-07-16,Cancelada,168.45
+192,73,Ortopedia,2025-08-14,Cancelada,192.37
+193,10,Clínica Geral,2025-09-03,Faltou,171.73
+194,2,Cardiologia,2025-08-12,Faltou,105.24
+195,27,Clínica Geral,2025-09-09,Realizada,184.58
+196,53,Ortopedia,2025-07-17,Faltou,98.73
+197,1,Clínica Geral,2025-07-24,Cancelada,103.01
+198,40,Cardiologia,2025-08-26,Remarcada,104.88
+199,49,Ortopedia,2025-09-12,Cancelada,181.63
+200,41,Endocrinologia,2025-09-19,Remarcada,95.8
+201,2,Pediatria,2025-10-06,Remarcada,142.44
+202,22,Ortopedia,2025-09-10,Remarcada,145.26
+203,5,Pediatria,2025-09-21,Faltou,143.92
+204,99,Cardiologia,2025-08-21,Remarcada,155.18
+205,31,Pediatria,2025-09-02,Remarcada,139.91
+206,43,Ortopedia,2025-09-06,Remarcada,194.78
+207,10,Endocrinologia,2025-09-12,Remarcada,179.45
+208,44,Endocrinologia,2025-10-06,Faltou,197.04
+209,10,Pediatria,2025-09-16,Faltou,148.58
+210,11,Pediatria,2025-10-08,Cancelada,142.28
+211,36,Endocrinologia,2025-10-08,Realizada,160.97
+212,61,Clínica Geral,2025-08-02,Faltou,127.28
+213,90,Clínica Geral,2025-07-26,Realizada,136.32
+214,20,Ortopedia,2025-07-28,Remarcada,96.07
+215,12,Pediatria,2025-09-19,Remarcada,120.8
+216,29,Ortopedia,2025-09-27,Faltou,199.38
+217,65,Ortopedia,2025-10-02,Cancelada,117.92
+218,25,Endocrinologia,2025-09-29,Remarcada,183.59
+219,80,Cardiologia,2025-10-09,Realizada,82.83
+220,22,Clínica Geral,2025-08-04,Cancelada,172.89
+221,47,Ortopedia,2025-08-13,Realizada,110.66
+222,91,Ortopedia,2025-08-29,Realizada,192.02
+223,5,Clínica Geral,2025-09-03,Realizada,119.59
+224,50,Clínica Geral,2025-08-05,Cancelada,183.23
+225,44,Clínica Geral,2025-09-03,Remarcada,191.42
+226,30,Clínica Geral,2025-10-10,Remarcada,101.91
+227,89,Endocrinologia,2025-09-22,Cancelada,80.54
+228,10,Cardiologia,2025-09-15,Remarcada,148.58
+229,25,Endocrinologia,2025-08-09,Realizada,89.24
+230,78,Pediatria,2025-08-27,Cancelada,143.3
+231,76,Ortopedia,2025-09-30,Realizada,98.3
+232,81,Cardiologia,2025-08-24,Faltou,95.95
+233,57,Clínica Geral,2025-10-07,Faltou,92.8
+234,37,Pediatria,2025-09-24,Realizada,98.88
+235,99,Clínica Geral,2025-07-23,Faltou,80.04
+236,39,Pediatria,2025-08-15,Cancelada,170.4
+237,7,Clínica Geral,2025-07-24,Cancelada,109.4
+238,98,Pediatria,2025-08-05,Remarcada,182.19
+239,96,Clínica Geral,2025-08-27,Realizada,146.23
+240,35,Endocrinologia,2025-08-14,Faltou,156.32
+241,46,Cardiologia,2025-07-15,Faltou,190.38
+242,51,Clínica Geral,2025-07-21,Faltou,81.27
+243,51,Clínica Geral,2025-07-21,Cancelada,175.66
+244,15,Ortopedia,2025-09-10,Faltou,85.69
+245,69,Cardiologia,2025-09-26,Faltou,91.17
+246,87,Pediatria,2025-08-09,Remarcada,115.99
+247,22,Pediatria,2025-08-07,Remarcada,87.37
+248,17,Clínica Geral,2025-09-04,Faltou,134.22
+249,74,Ortopedia,2025-07-23,Remarcada,119.89
+250,100,Pediatria,2025-07-15,Realizada,125.52
+251,2,Endocrinologia,2025-09-15,Cancelada,185.92
+252,52,Ortopedia,2025-08-10,Faltou,152.88
+253,74,Cardiologia,2025-07-31,Realizada,158.49
+254,50,Endocrinologia,2025-07-26,Faltou,89.7
+255,27,Endocrinologia,2025-09-25,Remarcada,139.63
+256,84,Clínica Geral,2025-09-30,Faltou,103.57
+257,25,Clínica Geral,2025-09-13,Cancelada,115.14
+258,61,Clínica Geral,2025-07-15,Faltou,165.88
+259,9,Cardiologia,2025-08-19,Realizada,84.51
+260,35,Pediatria,2025-09-13,Remarcada,148.84
+261,10,Cardiologia,2025-08-02,Faltou,157.19
+262,92,Clínica Geral,2025-10-08,Cancelada,173.09
+263,55,Endocrinologia,2025-09-02,Faltou,182.05
+264,58,Cardiologia,2025-09-29,Remarcada,116.59
+265,55,Clínica Geral,2025-10-02,Faltou,156.51
+266,52,Pediatria,2025-08-10,Realizada,116.38
+267,39,Endocrinologia,2025-08-17,Realizada,173.01
+268,76,Ortopedia,2025-09-09,Cancelada,170.95
+269,8,Clínica Geral,2025-10-10,Realizada,170.89
+270,61,Cardiologia,2025-08-07,Realizada,102.61
+271,9,Endocrinologia,2025-08-14,Faltou,149.95
+272,19,Endocrinologia,2025-07-31,Cancelada,140.48
+273,89,Endocrinologia,2025-08-05,Realizada,197.75
+274,23,Pediatria,2025-07-19,Realizada,108.3
+275,72,Endocrinologia,2025-07-16,Realizada,130.46
+276,10,Ortopedia,2025-07-19,Cancelada,162.69
+277,28,Clínica Geral,2025-08-20,Remarcada,132.81
+278,40,Cardiologia,2025-09-02,Remarcada,177.87
+279,81,Clínica Geral,2025-09-25,Faltou,136.98
+280,77,Cardiologia,2025-09-18,Realizada,115.49
+281,16,Cardiologia,2025-09-21,Cancelada,148.75
+282,37,Cardiologia,2025-07-29,Faltou,100.79
+283,85,Clínica Geral,2025-10-03,Faltou,170.12
+284,67,Cardiologia,2025-07-25,Faltou,198.19
+285,62,Clínica Geral,2025-07-24,Remarcada,193.1
+286,12,Ortopedia,2025-09-08,Faltou,123.54
+287,99,Clínica Geral,2025-08-14,Remarcada,191.62
+288,46,Endocrinologia,2025-07-17,Faltou,135.71
+289,69,Pediatria,2025-09-02,Cancelada,182.16
+290,3,Cardiologia,2025-09-13,Faltou,81.91
+291,47,Clínica Geral,2025-08-27,Cancelada,188.06
+292,91,Pediatria,2025-09-17,Realizada,115.05
+293,76,Clínica Geral,2025-10-01,Realizada,86.12
+294,33,Ortopedia,2025-09-22,Cancelada,149.25
+295,81,Ortopedia,2025-08-14,Cancelada,123.93
+296,5,Endocrinologia,2025-09-28,Faltou,144.52
+297,56,Endocrinologia,2025-09-26,Faltou,129.28
+298,76,Clínica Geral,2025-09-15,Cancelada,141.75
+299,27,Ortopedia,2025-09-18,Faltou,198.66
+300,73,Pediatria,2025-07-16,Cancelada,153.17
+301,9,Clínica Geral,2025-08-26,Realizada,99.15
+302,12,Ortopedia,2025-07-29,Cancelada,131.45
+303,90,Endocrinologia,2025-09-29,Realizada,109.88
+304,74,Cardiologia,2025-09-10,Cancelada,131.29
+305,33,Cardiologia,2025-08-11,Remarcada,113.8
+306,7,Clínica Geral,2025-09-23,Faltou,108.44
+307,91,Pediatria,2025-07-23,Remarcada,162.04
+308,77,Clínica Geral,2025-09-11,Realizada,197.15
+309,58,Pediatria,2025-10-08,Remarcada,138.11
+310,38,Ortopedia,2025-10-05,Realizada,133.67
+311,9,Ortopedia,2025-07-24,Faltou,174.5
+312,67,Cardiologia,2025-08-22,Remarcada,183.06
+313,12,Cardiologia,2025-07-27,Realizada,135.87
+314,78,Clínica Geral,2025-07-25,Remarcada,149.91
+315,97,Endocrinologia,2025-08-10,Faltou,150.58
+316,24,Endocrinologia,2025-10-07,Cancelada,109.0
+317,28,Clínica Geral,2025-07-21,Faltou,112.0
+318,55,Clínica Geral,2025-09-23,Faltou,144.13
+319,45,Clínica Geral,2025-10-01,Faltou,152.33
+320,67,Clínica Geral,2025-09-02,Cancelada,144.47
+321,67,Ortopedia,2025-09-13,Realizada,87.76
+322,77,Cardiologia,2025-08-14,Cancelada,123.03
+323,17,Endocrinologia,2025-10-07,Remarcada,80.42
+324,98,Clínica Geral,2025-09-02,Realizada,140.13
+325,45,Cardiologia,2025-10-11,Cancelada,82.63
+326,8,Ortopedia,2025-07-22,Remarcada,190.56
+327,31,Cardiologia,2025-07-14,Faltou,131.88
+328,58,Cardiologia,2025-08-30,Remarcada,167.23
+329,10,Endocrinologia,2025-09-22,Realizada,95.41
+330,29,Ortopedia,2025-08-31,Cancelada,134.2
+331,52,Pediatria,2025-07-22,Realizada,95.07
+332,86,Cardiologia,2025-09-01,Cancelada,171.9
+333,52,Pediatria,2025-10-07,Faltou,119.49
+334,48,Endocrinologia,2025-09-30,Faltou,140.43
+335,78,Clínica Geral,2025-09-15,Faltou,171.58
+336,83,Clínica Geral,2025-08-15,Realizada,121.46
+337,16,Endocrinologia,2025-10-03,Cancelada,177.71
+338,29,Cardiologia,2025-09-17,Realizada,164.11
+339,55,Pediatria,2025-09-24,Cancelada,118.36
+340,96,Cardiologia,2025-07-15,Faltou,100.71
+341,85,Ortopedia,2025-08-20,Remarcada,142.69
+342,35,Clínica Geral,2025-08-19,Faltou,178.67
+343,47,Ortopedia,2025-09-11,Realizada,120.3
+344,47,Endocrinologia,2025-08-11,Realizada,99.92
+345,90,Endocrinologia,2025-10-11,Remarcada,124.22
+346,36,Ortopedia,2025-07-21,Realizada,160.53
+347,23,Ortopedia,2025-09-29,Cancelada,184.37
+348,44,Ortopedia,2025-09-29,Remarcada,165.83
+349,38,Cardiologia,2025-08-11,Remarcada,172.36
+350,59,Ortopedia,2025-07-14,Remarcada,160.24
+351,54,Pediatria,2025-09-22,Remarcada,149.37
+352,67,Clínica Geral,2025-08-12,Faltou,98.04
+353,89,Ortopedia,2025-08-25,Remarcada,165.13
+354,68,Clínica Geral,2025-08-22,Realizada,125.96
+355,59,Clínica Geral,2025-09-15,Cancelada,143.08
+356,4,Pediatria,2025-08-31,Cancelada,115.91
+357,7,Endocrinologia,2025-08-23,Faltou,172.59
+358,96,Ortopedia,2025-07-23,Cancelada,157.44
+359,82,Pediatria,2025-08-28,Remarcada,160.9
+360,52,Ortopedia,2025-09-22,Faltou,186.53
+361,46,Cardiologia,2025-08-25,Faltou,195.96
+362,22,Ortopedia,2025-07-30,Remarcada,112.28
+363,38,Clínica Geral,2025-08-17,Remarcada,89.37
+364,29,Endocrinologia,2025-07-23,Remarcada,84.53
+365,24,Cardiologia,2025-07-26,Cancelada,144.84
+366,73,Cardiologia,2025-08-15,Faltou,152.92
+367,79,Cardiologia,2025-07-16,Realizada,146.43
+368,34,Endocrinologia,2025-09-04,Cancelada,125.72
+369,60,Pediatria,2025-08-27,Cancelada,160.23
+370,1,Ortopedia,2025-08-05,Cancelada,161.95
+371,98,Cardiologia,2025-09-28,Cancelada,93.71
+372,8,Pediatria,2025-10-05,Faltou,98.88
+373,99,Pediatria,2025-07-24,Cancelada,83.2
+374,42,Ortopedia,2025-08-10,Realizada,132.22
+375,70,Cardiologia,2025-10-01,Faltou,156.18
+376,53,Cardiologia,2025-09-04,Cancelada,90.77
+377,68,Endocrinologia,2025-09-29,Faltou,104.84
+378,14,Endocrinologia,2025-09-13,Cancelada,171.18
+379,96,Cardiologia,2025-08-25,Remarcada,127.45
+380,60,Clínica Geral,2025-08-23,Faltou,104.21
+381,54,Clínica Geral,2025-08-02,Faltou,110.23
+382,75,Cardiologia,2025-08-15,Remarcada,141.53
+383,19,Clínica Geral,2025-07-27,Remarcada,131.69
+384,11,Endocrinologia,2025-09-29,Realizada,164.07
+385,45,Ortopedia,2025-09-03,Remarcada,105.79
+386,72,Pediatria,2025-09-17,Realizada,99.6
+387,4,Pediatria,2025-08-12,Realizada,102.86
+388,41,Cardiologia,2025-09-25,Realizada,135.0
+389,94,Pediatria,2025-09-13,Remarcada,82.45
+390,73,Pediatria,2025-08-10,Remarcada,132.23
+391,71,Clínica Geral,2025-07-29,Remarcada,96.3
+392,57,Cardiologia,2025-08-26,Cancelada,125.8
+393,6,Endocrinologia,2025-09-23,Realizada,152.48
+394,56,Clínica Geral,2025-08-13,Remarcada,149.32
+395,18,Cardiologia,2025-09-14,Faltou,83.2
+396,70,Endocrinologia,2025-08-09,Remarcada,110.69
+397,55,Endocrinologia,2025-10-09,Remarcada,167.2
+398,83,Cardiologia,2025-09-15,Realizada,148.58
+399,56,Cardiologia,2025-08-16,Cancelada,86.49
+400,96,Endocrinologia,2025-08-15,Remarcada,145.2
+401,52,Cardiologia,2025-08-26,Remarcada,192.7
+402,58,Endocrinologia,2025-07-14,Realizada,125.79
+403,34,Ortopedia,2025-09-23,Remarcada,145.6
+404,95,Ortopedia,2025-08-04,Cancelada,147.2
+405,78,Clínica Geral,2025-09-17,Faltou,89.71
+406,34,Pediatria,2025-10-07,Remarcada,131.82
+407,45,Pediatria,2025-07-20,Realizada,199.57
+408,73,Clínica Geral,2025-09-13,Faltou,135.73
+409,88,Cardiologia,2025-07-28,Faltou,111.29
+410,94,Endocrinologia,2025-09-28,Realizada,81.97
+411,20,Endocrinologia,2025-09-17,Remarcada,175.88
+412,50,Cardiologia,2025-09-16,Remarcada,152.3
+413,75,Clínica Geral,2025-09-09,Realizada,174.55
+414,16,Clínica Geral,2025-09-20,Remarcada,98.02
+415,97,Cardiologia,2025-07-16,Cancelada,166.64
+416,26,Ortopedia,2025-08-23,Faltou,133.09
+417,32,Clínica Geral,2025-09-17,Realizada,160.3
+418,87,Cardiologia,2025-09-12,Cancelada,156.76
+419,44,Ortopedia,2025-10-04,Remarcada,91.87
+420,7,Endocrinologia,2025-10-07,Realizada,184.29
+421,81,Cardiologia,2025-09-10,Realizada,196.56
+422,49,Clínica Geral,2025-10-11,Faltou,125.3
+423,26,Cardiologia,2025-08-27,Remarcada,145.86
+424,28,Pediatria,2025-10-09,Cancelada,176.6
+425,59,Endocrinologia,2025-08-13,Faltou,151.15
+426,62,Pediatria,2025-10-06,Remarcada,180.13
+427,83,Clínica Geral,2025-08-29,Realizada,160.29
+428,85,Ortopedia,2025-09-21,Faltou,128.98
+429,58,Pediatria,2025-09-19,Cancelada,118.67
+430,97,Cardiologia,2025-09-16,Remarcada,81.57
+431,48,Ortopedia,2025-09-26,Remarcada,125.68
+432,56,Pediatria,2025-07-29,Realizada,127.05
+433,78,Ortopedia,2025-08-01,Faltou,105.68
+434,70,Endocrinologia,2025-08-20,Remarcada,150.59
+435,20,Endocrinologia,2025-08-09,Faltou,177.62
+436,46,Endocrinologia,2025-08-29,Remarcada,199.92
+437,63,Cardiologia,2025-08-26,Realizada,121.93
+438,8,Endocrinologia,2025-07-26,Realizada,195.37
+439,24,Cardiologia,2025-09-13,Remarcada,109.26
+440,75,Pediatria,2025-09-30,Cancelada,89.95
+441,37,Endocrinologia,2025-10-09,Faltou,98.25
+442,17,Clínica Geral,2025-09-22,Realizada,138.83
+443,9,Pediatria,2025-09-09,Realizada,180.16
+444,29,Cardiologia,2025-09-15,Remarcada,171.53
+445,27,Ortopedia,2025-08-13,Remarcada,103.98
+446,88,Ortopedia,2025-10-09,Realizada,190.54
+447,86,Ortopedia,2025-07-18,Remarcada,138.1
+448,32,Ortopedia,2025-09-04,Faltou,93.81
+449,70,Clínica Geral,2025-07-24,Realizada,132.14
+450,32,Cardiologia,2025-09-29,Remarcada,148.26
+451,90,Ortopedia,2025-07-19,Remarcada,152.21
+452,58,Endocrinologia,2025-07-19,Faltou,152.67
+453,45,Ortopedia,2025-09-20,Realizada,84.42
+454,92,Endocrinologia,2025-09-01,Remarcada,94.85
+455,98,Clínica Geral,2025-10-11,Realizada,97.07
+456,68,Ortopedia,2025-09-06,Remarcada,99.28
+457,50,Cardiologia,2025-08-29,Remarcada,154.08
+458,9,Pediatria,2025-08-23,Cancelada,111.6
+459,69,Clínica Geral,2025-08-19,Faltou,146.03
+460,26,Ortopedia,2025-09-20,Cancelada,183.95
+461,12,Cardiologia,2025-09-09,Faltou,123.64
+462,97,Ortopedia,2025-08-27,Remarcada,149.33
+463,5,Clínica Geral,2025-09-04,Cancelada,192.03
+464,80,Clínica Geral,2025-09-20,Cancelada,103.99
+465,50,Pediatria,2025-09-14,Faltou,138.12
+466,36,Endocrinologia,2025-08-19,Cancelada,128.17
+467,75,Cardiologia,2025-08-01,Realizada,197.51
+468,36,Pediatria,2025-07-30,Cancelada,109.97
+469,7,Clínica Geral,2025-07-17,Realizada,117.43
+470,31,Pediatria,2025-10-01,Faltou,128.09
+471,15,Ortopedia,2025-07-28,Faltou,167.2
+472,5,Ortopedia,2025-09-10,Remarcada,199.67
+473,62,Cardiologia,2025-10-07,Realizada,116.25
+474,16,Ortopedia,2025-08-17,Remarcada,119.76
+475,36,Cardiologia,2025-07-26,Remarcada,126.27
+476,42,Clínica Geral,2025-08-27,Cancelada,173.18
+477,68,Endocrinologia,2025-10-07,Cancelada,96.96
+478,24,Endocrinologia,2025-08-15,Faltou,195.13
+479,23,Pediatria,2025-09-24,Realizada,178.3
+480,27,Endocrinologia,2025-09-19,Realizada,149.82
+481,12,Cardiologia,2025-10-06,Cancelada,140.6
+482,59,Clínica Geral,2025-08-12,Remarcada,93.6
+483,85,Ortopedia,2025-10-11,Cancelada,118.75
+484,34,Ortopedia,2025-07-24,Realizada,172.39
+485,19,Cardiologia,2025-09-28,Remarcada,193.58
+486,18,Cardiologia,2025-09-12,Realizada,178.53
+487,83,Cardiologia,2025-10-03,Cancelada,157.4
+488,58,Clínica Geral,2025-08-17,Faltou,87.5
+489,6,Cardiologia,2025-07-22,Realizada,164.37
+490,54,Pediatria,2025-07-20,Remarcada,191.17
+491,98,Ortopedia,2025-09-11,Realizada,180.67
+492,86,Pediatria,2025-08-14,Cancelada,108.04
+493,72,Endocrinologia,2025-07-29,Remarcada,187.54
+494,80,Endocrinologia,2025-09-22,Remarcada,83.94
+495,66,Ortopedia,2025-09-22,Realizada,192.6
+496,57,Cardiologia,2025-08-20,Realizada,122.82
+497,65,Endocrinologia,2025-07-22,Realizada,87.29
+498,39,Pediatria,2025-09-29,Realizada,142.44
+499,25,Ortopedia,2025-10-01,Cancelada,184.75
+500,50,Ortopedia,2025-09-21,Faltou,114.93

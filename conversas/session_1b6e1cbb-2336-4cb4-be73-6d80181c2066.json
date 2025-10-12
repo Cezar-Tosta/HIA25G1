@@ -1,0 +1,16 @@
+[
+  {
+    "role": "user",
+    "content": "Quantas faltas tivemos em 2024 de pacientes?",
+    "timestamp": "2025-10-12T09:52:46.639814",
+    "metadata": {}
+  },
+  {
+    "role": "assistant",
+    "content": "Em 2024, até setembro, tivemos um total de 31.558 faltas (no-show) de pacientes, o que representa 25,2% das consultas agendadas, de um total de 125.430 consultas. A taxa de comparecimento foi de 74,8% com 93.872 pacientes comparecendo. As especialidades com maior taxa de absenteísmo foram Cardiologia (32,4%), Ortopedia (28,7%) e Dermatologia (23,1%). Para mais informações, consulte o Relatório de Absenteísmo - 2024 da Secretaria de Saúde do RJ.",
+    "timestamp": "2025-10-12T09:53:03.733575",
+    "metadata": {
+      "agent": "Especialista Clínico"
+    }
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "role": "user",
+    "content": "Quanto pacientes ficaram sem consulta no mês de outubro de 2025?",
+    "timestamp": "2025-10-12T09:04:33.591498",
+    "metadata": {}
+  },
+  {
+    "role": "assistant",
+    "content": "Infelizmente, não consegui encontrar dados específicos sobre o número de pacientes que ficaram sem consulta no mês de outubro de 2025. Os documentos acessados fornecem informações sobre absenteísmo até setembro de 2024, mas não cobrem o ano de 2025. Se você tiver acesso a relatórios ou dados mais recentes, eu poderia ajudar a interpretá-los. Se precisar de mais informações ou assistência, estou à disposição!",
+    "timestamp": "2025-10-12T09:04:40.128880",
+    "metadata": {
+      "agent": "Especialista Clínico"
+    }
+  },
+  {
+    "role": "user",
+    "content": "Então, em setembro de 2024?",
+    "timestamp": "2025-10-12T09:06:05.940667",
+    "metadata": {}
+  },
+  {
+    "role": "assistant",
+    "content": "Em setembro de 2024, o total de consultas agendadas foi de 125.430, e o número de pacientes que não compareceram (no-show) foi de 31.558, o que representa 25,2% das consultas agendadas. Este dado indica um significativo nível de absenteísmo. As especialidades com maior taxa de faltas foram Cardiologia (32,4%), Ortopedia (28,7%) e Dermatologia (23,1%) [Fonte: Relatório de Absenteísmo - 2024, Secretaria de Saúde do RJ].",
+    "timestamp": "2025-10-12T09:06:12.898523",
+    "metadata": {
+      "agent": "Assistente de Pesquisa"
+    }
+  },
+  {
+    "role": "user",
+    "content": "Quantos ausentes para Cardiologia foram avisados da marcação, nesse mês de setembro de 2024? Dê a resposta em porcentagem.",
+    "timestamp": "2025-10-12T09:07:46.176157",
+    "metadata": {}
+  },
+  {
+    "role": "assistant",
+    "content": "Parece que não consegui obter diretamente os dados específicos sobre quantos pacientes ausentes para Cardiologia foram avisados da marcação em setembro de 2024. No entanto, posso ajudar a interpretar os dados disponíveis.\n\nCom base nos dados que consultei, sabemos que o total de consultas agendadas para Cardiologia foi de 32,4% das consultas totais. Se considerarmos que 31.558 pacientes não compareceram em setembro, a taxa de absenteísmo em Cardiologia foi uma das mais altas.\n\nPara calcular a porcentagem de pacientes avisados, precisaríamos de dados adicionais sobre quantos dos ausentes foram de fato informados sobre a consulta. Se você puder me fornecer essa informação ou se houver um relatório específico que você gostaria que eu analisasse, ficarei feliz em ajudar!\n\nSe precisar, posso fazer outra consulta ou buscar mais informações. Estou à disposição para ajudar!",
+    "timestamp": "2025-10-12T09:07:54.130393",
+    "metadata": {
+      "agent": "Analista de Dados"
+    }
+  }
+]

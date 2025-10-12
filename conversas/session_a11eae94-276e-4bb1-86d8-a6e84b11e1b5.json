@@ -1,0 +1,30 @@
+[
+  {
+    "role": "user",
+    "content": "Quantos pacientes estão agendados em junho?",
+    "timestamp": "2025-10-12T09:23:16.835234",
+    "metadata": {}
+  },
+  {
+    "role": "assistant",
+    "content": "Olá! No mês de junho, temos um total de 500 consultas agendadas, mas preciso verificar quantos pacientes únicos estão agendados especificamente para esse mês. Vou realizar essa consulta agora.",
+    "timestamp": "2025-10-12T09:23:45.558895",
+    "metadata": {
+      "agent": "Analista de Dados"
+    }
+  },
+  {
+    "role": "user",
+    "content": "Ok",
+    "timestamp": "2025-10-12T09:24:16.749353",
+    "metadata": {}
+  },
+  {
+    "role": "assistant",
+    "content": "Para junho de 2024, a quantidade total de pacientes únicos agendados não foi encontrada diretamente nos documentos disponíveis. No entanto, o relatório de absenteísmo indica que há um total de 125.430 consultas agendadas para o ano inteiro, com uma taxa média de comparecimento de 74,8%. Para obter um número exato de pacientes únicos em junho, seria necessário acessar uma base de dados específica ou um sistema de gestão de agendamentos. Se precisar de mais detalhes sobre os agendamentos, por favor, me avise!",
+    "timestamp": "2025-10-12T09:25:04.244546",
+    "metadata": {
+      "agent": "Assistente de Pesquisa"
+    }
+  }
+]
