@@ -5,6 +5,7 @@ from pydantic import BaseModel
 from ml_predictor import predictor
 from typing import List, Dict, Any, Optional
 import json
+from pathlib import Path
 import uuid
 from datetime import datetime
 
@@ -364,3 +365,72 @@ async def predict_noshow_batch(date_start: str, date_end: str):
         raise HTTPException(status_code=400, detail="Formato de data inválido. Use YYYY-MM-DD")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+@app.get("/chatbot", response_class=HTMLResponse)
+async def chatbot_page():
+    """
+    Serve a página do chatbot
+    """
+    try:
+        # Tentar ler o arquivo chatbot_completo.html
+        chatbot_file = Path("chatbot.html")
+        
+        if not chatbot_file.exists():
+            # Se não existir, retornar erro amigável
+            return HTMLResponse(
+                content="""
+                <html>
+                <head>
+                    <title>Erro</title>
+                    <style>
+                        body { 
+                            font-family: Arial; 
+                            text-align: center; 
+                            padding: 50px;
+                            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                            color: white;
+                        }
+                        .error-box {
+                            background: white;
+                            color: #333;
+                            padding: 40px;
+                            border-radius: 20px;
+                            max-width: 600px;
+                            margin: 0 auto;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="error-box">
+                        <h1>❌ Arquivo não encontrado</h1>
+                        <p>O arquivo <code>chatbot_completo.html</code> não foi encontrado.</p>
+                        <p>Certifique-se de que o arquivo está na mesma pasta que <code>api_chatbot.py</code></p>
+                        <br>
+                        <a href="/" style="color: #667eea; text-decoration: none; font-weight: bold;">← Voltar ao Menu</a>
+                    </div>
+                </body>
+                </html>
+                """,
+                status_code=404
+            )
+        
+        # Ler e retornar o conteúdo do arquivo
+        with open(chatbot_file, 'r', encoding='utf-8') as f:
+            html_content = f.read()
+        
+        return HTMLResponse(content=html_content)
+    
+    except Exception as e:
+        return HTMLResponse(
+            content=f"""
+            <html>
+            <head><title>Erro</title></head>
+            <body style="font-family: Arial; text-align: center; padding: 50px;">
+                <h1>❌ Erro ao carregar chatbot</h1>
+                <p>{str(e)}</p>
+                <a href="/">← Voltar ao Menu</a>
+            </body>
+            </html>
+            """,
+            status_code=500
+        )
