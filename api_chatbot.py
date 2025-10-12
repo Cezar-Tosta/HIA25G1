@@ -19,6 +19,13 @@ from agentes_chatbot import (
 )
 from memory_manager import ConversationMemory
 
+
+from fastapi import Depends
+from fastapi.security import OAuth2PasswordRequestForm
+from auth_jwt import authenticate_user, create_access_token, verify_token
+from datetime import timedelta
+
+
 app = FastAPI(title="Chatbot Inteligente para Gestão de Saúde", version="1.0.0")
 
 # CORS
@@ -111,9 +118,27 @@ def route_to_agent(message: str, context: str) -> tuple[Any, str]:
 # ============================================================================
 # ENDPOINTS
 # ============================================================================
+@app.post("/login")
+async def login(form_data: OAuth2PasswordRequestForm = Depends()):
+    """
+    Login endpoint that returns a JWT token.
+    Username: admin
+    Password: admin
+    """
+    user = authenticate_user(form_data.username, form_data.password)
+    if not user:
+        raise HTTPException(status_code=400, detail="Invalid username or password")
+
+    access_token_expires = timedelta(minutes=60)
+    access_token = create_access_token(
+        data={"sub": user["username"]}, expires_delta=access_token_expires
+    )
+
+    return {"access_token": access_token, "token_type": "bearer"}
+
 
 @app.post("/chat", response_model=ChatResponse)
-async def chat(chat_message: ChatMessage):
+async def chat(chat_message: ChatMessage, username: str = Depends(verify_token)):
     """
     Endpoint principal do chatbot
     
@@ -198,7 +223,7 @@ async def chat(chat_message: ChatMessage):
 
 
 @app.get("/sessions", response_model=List[SessionInfo])
-async def list_sessions():
+async def list_sessions(username: str = Depends(verify_token)):
     """Lista todas as sessões ativas"""
     return [
         SessionInfo(
@@ -211,7 +236,7 @@ async def list_sessions():
 
 
 @app.get("/session/{session_id}/history")
-async def get_session_history(session_id: str):
+async def get_session_history(session_id: str, username: str = Depends(verify_token)):
     """Retorna histórico de uma sessão"""
     if session_id not in sessions:
         raise HTTPException(status_code=404, detail="Sessão não encontrada")
@@ -224,7 +249,7 @@ async def get_session_history(session_id: str):
 
 
 @app.delete("/session/{session_id}")
-async def delete_session(session_id: str):
+async def delete_session(session_id: str, username: str = Depends(verify_token)):
     """Deleta uma sessão"""
     if session_id in sessions:
         del sessions[session_id]
@@ -233,7 +258,7 @@ async def delete_session(session_id: str):
 
 
 @app.post("/session/{session_id}/clear")
-async def clear_session(session_id: str):
+async def clear_session(session_id: str, username: str = Depends(verify_token)):
     """Limpa o histórico de uma sessão mas mantém a sessão"""
     if session_id not in sessions:
         raise HTTPException(status_code=404, detail="Sessão não encontrada")
@@ -247,7 +272,7 @@ async def clear_session(session_id: str):
 # ============================================================================
 
 @app.post("/quick_query")
-async def quick_query(query: str):
+async def quick_query(query: str, username: str = Depends(verify_token)):
     """
     Endpoint para testes rápidos sem gerenciar sessões
     """
@@ -309,7 +334,7 @@ async def root():
 
 
 @app.get("/predict_noshow/{patient_id}")
-async def predict_noshow_individual(patient_id: int):
+async def predict_noshow_individual(patient_id: int, username: str = Depends(verify_token)):
     """
     Prediz probabilidade de no-show para um paciente específico
     """
@@ -326,7 +351,7 @@ async def predict_noshow_individual(patient_id: int):
 
 
 @app.get("/predict_noshow_batch")
-async def predict_noshow_batch(date_start: str, date_end: str):
+async def predict_noshow_batch(date_start: str, date_end: str, username: str = Depends(verify_token)):
     """
     Prediz no-show para todos pacientes em um período
     
@@ -359,7 +384,7 @@ async def predict_noshow_batch(date_start: str, date_end: str):
         raise HTTPException(status_code=500, detail=str(e))
     
 @app.get("/chatbot", response_class=HTMLResponse)
-async def chatbot_page():
+async def chatbot_page(username: str = Depends(verify_token)):
     """
     Serve a página do chatbot
     """

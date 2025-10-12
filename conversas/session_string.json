@@ -1,0 +1,16 @@
+[
+  {
+    "role": "user",
+    "content": "merda",
+    "timestamp": "2025-10-12T13:01:53.128859",
+    "metadata": {}
+  },
+  {
+    "role": "assistant",
+    "content": "Olá! Parece que você está um pouco frustrado. Estou aqui para ajudar. Se houver algo específico que você gostaria de discutir ou se precisar de informações sobre algum tema médico, sinta-se à vontade para me contar! Estou à disposição para buscar dados ou documentos que possam ser úteis. Como posso ajudar você hoje?",
+    "timestamp": "2025-10-12T13:02:16.868476",
+    "metadata": {
+      "agent": "Assistente de Pesquisa"
+    }
+  }
+]
