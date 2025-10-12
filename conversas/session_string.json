@@ -1,28 +1,14 @@
 [
   {
     "role": "user",
-    "content": "medico idiota",
-    "timestamp": "2025-10-12T13:20:25.125830",
+    "content": "12",
+    "timestamp": "2025-10-12T14:42:27.831057",
     "metadata": {}
   },
   {
     "role": "assistant",
-    "content": "A comunicação eficaz entre médicos e pacientes é essencial para garantir que os cuidados de saúde sejam bem-sucedidos. Algumas práticas recomendadas incluem:\n\n1. **Escuta Ativa**: O médico deve ouvir atentamente as preocupações do paciente, validando seus sentimentos e demonstrando empatia.\n   \n2. **Clareza nas Explicações**: Usar uma linguagem simples e evitar jargões médicos ajuda o paciente a compreender melhor seu estado de saúde e as opções de tratamento.\n\n3. **Perguntas Abertas**: Incentivar os pacientes a compartilhar o que pensam e sentem, fazendo perguntas abertas que estimulem a conversa.\n\n4. **Feedback**: Solicitar que o paciente repita as informações que entendeu para garantir que não haja mal-entendidos.\n\n5. **Apoio Emocional**: Reconhecer que os pacientes podem estar enfrentando estresse ou ansiedade e oferecer suporte emocional durante as consultas.\n\nEssas práticas não são apenas recomendadas por estudos, mas também podem ser encontradas em diretrizes de organizações de saúde, como a Organização Mundial da Saúde (OMS) e a American Medical Association (AMA). Para mais informações, você pode consultar fontes como a OMS ou publicações acadêmicas sobre comunicação na saúde.",
-    "timestamp": "2025-10-12T13:21:16.087080",
-    "metadata": {
-      "agent": "Assistente de Pesquisa"
-    }
-  },
-  {
-    "role": "user",
-    "content": "sei la",
-    "timestamp": "2025-10-12T13:23:33.627342",
-    "metadata": {}
-  },
-  {
-    "role": "assistant",
-    "content": "A comunicação entre médico e paciente pode ser desafiadora, mas é fundamental para o cuidado adequado. Se você está se sentindo confuso ou insatisfeito com um atendimento médico, é completamente válido. Às vezes, pode ajudar a refletir sobre o que exatamente não está claro ou não foi satisfatório na sua experiência.\n\nLembre-se de que os médicos estão lá para ajudar e, muitas vezes, uma boa comunicação pode melhorar a situação. Se você tiver dúvidas específicas ou se sentir que não foi ouvido, considere expressar isso diretamente ao seu médico. Pode ser útil também trazer uma lista de perguntas ou preocupações para a próxima consulta.\n\nPara entender melhor sobre práticas de comunicação eficaz na saúde, posso buscar informações sobre diretrizes específicas que abordem esse tema. O que você acha? Alguma dúvida ou questão específica que gostaria de explorar? \n\nSe preferir, posso buscar diretrizes que tratem da comunicação entre médicos e pacientes. Isso pode te ajudar a entender melhor como essa interação pode ser aprimorada. O que você prefere?",
-    "timestamp": "2025-10-12T13:23:38.444661",
+    "content": "Parece que você enviou apenas um número, \"12\". Poderia me dar um pouco mais de contexto ou esclarecer o que você gostaria de saber? Estou aqui para ajudar com informações médicas, diretrizes ou qualquer outra questão que você tenha em mente!",
+    "timestamp": "2025-10-12T14:42:39.579687",
     "metadata": {
       "agent": "Assistente de Pesquisa"
     }

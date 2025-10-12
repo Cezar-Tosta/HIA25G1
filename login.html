@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preven-SUS Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex items-center justify-center h-screen">
+    <div class="text-center p-10 bg-white rounded-2xl shadow-xl max-w-md w-full mx-4 border border-gray-200">
+        <!-- Main Title -->
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">
+            Preven-SUS
+        </h1>
+        <!-- Subtitle -->
+        <p class="text-gray-500 mb-8">
+            Faça login para acessar sua conta
+        </p>
+
+        <!-- Login Form -->
+        <form action="/loginform" method="POST" class="flex flex-col gap-4">
+            <input 
+                type="text" 
+                name="username" 
+                placeholder="Username" 
+                required
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+            >
+            <input 
+                type="password" 
+                name="password" 
+                placeholder="Senha" 
+                required
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+            >
+            <button 
+                type="submit" 
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+            >
+                Entrar
+            </button>
+        </form>
+
+       
+    </div>
+</body>
+</html>

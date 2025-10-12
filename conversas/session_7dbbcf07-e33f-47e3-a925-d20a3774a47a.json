@@ -1,0 +1,30 @@
+[
+  {
+    "role": "user",
+    "content": "23123",
+    "timestamp": "2025-10-12T14:34:41.620371",
+    "metadata": {}
+  },
+  {
+    "role": "assistant",
+    "content": "Olá! Parece que \"23123\" não é um termo que eu consiga associar a diretrizes ou informações específicas. Poderia fornecer mais detalhes ou esclarecer o que você gostaria de saber? Fico à disposição para ajudar!",
+    "timestamp": "2025-10-12T14:34:45.527280",
+    "metadata": {
+      "agent": "Assistente de Pesquisa"
+    }
+  },
+  {
+    "role": "user",
+    "content": "\n📋 ANÁLISE DE RISCO DE NO-SHOW - PACIENTE #1234\n\nDADOS DA PREDIÇÃO:\n- Probabilidade de falta: NaN%\n- Nível de risco: BAIXO\n\nINFORMAÇÕES DO PACIENTE:\nundefined\n\nFATORES DE RISCO IDENTIFICADOS:\nN/A\n\n🎯 SOLICITAÇÃO:\n\nPor favor, analise este paciente e me forneça:\n\n1. **INTERPRETAÇÃO DO RISCO**: Explique o que significa essa probabilidade de NaN% na prática\n\n2. **RECOMENDAÇÕES DE AÇÃO IMEDIATA**: Sugira ações específicas:\n   - Que tipo de contato fazer? (SMS, ligação, WhatsApp?)\n   - Quando fazer o contato? (48h antes? 24h?)\n   - Que mensagem enviar? (forneça um exemplo prático)\n   - Outras medidas preventivas?\n\n3. **PRIORIZAÇÃO**: Este paciente deve ser contatado com qual urgência?\n\n4. **CUSTO-BENEFÍCIO**: Vale a pena investir em intervenção? Justifique.\n\nSeja específico e acionável. A equipe precisa saber exatamente o que fazer.\n",
+    "timestamp": "2025-10-12T14:34:51.940256",
+    "metadata": {}
+  },
+  {
+    "role": "assistant",
+    "content": "1. **INTERPRETAÇÃO DO RISCO**: Uma probabilidade de falta de NaN% significa que não há dados disponíveis ou que a previsão não pôde ser calculada. Isso pode ocorrer devido à falta de histórico de consultas ou no-shows. O nível de risco baixo indica que, mesmo sem dados claros, a probabilidade de não comparecimento é considerada baixa.\n\n2. **RECOMENDAÇÕES DE AÇÃO IMEDIATA**:\n   - **Tipo de contato**: SMS ou WhatsApp são mais eficazes, pois são menos intrusivos.\n   - **Quando fazer o contato**: 24 horas antes da consulta.\n   - **Mensagem sugerida**: \"Olá [Nome do Paciente], lembramos que você tem uma consulta agendada para amanhã. Estamos à disposição para qualquer dúvida! Agradecemos pela sua presença.\"\n   - **Outras medidas preventivas**: Enviar um lembrete automático também pode ser útil.\n\n3. **PRIORIZAÇÃO**: O paciente deve ser contatado com urgência moderada (24 horas) devido à incerteza nos dados.\n\n4. **CUSTO-BENEFÍCIO**: Investir em intervenções de lembrete é geralmente válido, pois estatísticas mostram que o contato proativo pode reduzir no-shows em até 30% (Fonte: American Journal of Managed Care). O custo de um lembrete via SMS é baixo em comparação ao custo de uma consulta perdida.\n\nEssas recomendações são baseadas em práticas comuns de gestão de consultas e no-show em saúde pública.",
+    "timestamp": "2025-10-12T14:35:09.616263",
+    "metadata": {
+      "agent": "Analista de Dados"
+    }
+  }
+]

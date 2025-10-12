@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, HTTPException, Depends, WebSocket, WebSocketDisconnect, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 import uuid
 from datetime import datetime
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, RedirectResponse
 
 from crewai import Crew, Task, Process
 from agentes_chatbot import (
@@ -20,11 +20,11 @@ from agentes_chatbot import (
 from memory_manager import ConversationMemory
 
 
-from fastapi import Depends
 from fastapi.security import OAuth2PasswordRequestForm
 from auth_jwt import authenticate_user, create_access_token, verify_token
 from datetime import timedelta
 
+from auth_jwt import authenticate_user, create_access_token
 
 app = FastAPI(title="Chatbot Inteligente para Gestão de Saúde", version="1.0.0")
 
@@ -118,6 +118,7 @@ def route_to_agent(message: str, context: str) -> tuple[Any, str]:
 # ============================================================================
 # ENDPOINTS
 # ============================================================================
+
 @app.post("/login")
 async def login(form_data: OAuth2PasswordRequestForm = Depends()):
     """
@@ -135,6 +136,27 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends()):
     )
 
     return {"access_token": access_token, "token_type": "bearer"}
+
+
+@app.post("/loginform")
+async def login(form_data: OAuth2PasswordRequestForm = Depends()):
+    """
+    Login endpoint that returns a JWT token.
+    Username: admin
+    Password: admin
+    """
+    user = authenticate_user(form_data.username, form_data.password)
+    if not user:
+        raise HTTPException(status_code=400, detail="Invalid username or password")
+
+    access_token_expires = timedelta(minutes=60)
+    access_token = create_access_token(
+        data={"sub": user["username"]}, expires_delta=access_token_expires
+    )
+    # Redirect to /chat with token in query params
+    response = RedirectResponse(url=f"/chatbot?token={access_token}")
+    response.status_code = 302
+    return response
 
 
 @app.post("/chat", response_model=ChatResponse)
@@ -332,6 +354,12 @@ async def root():
     """Informações da API"""
     return FileResponse('index.html')
 
+@app.get("/login2")
+async def login_page():
+    """Serve a página de login"""
+    return FileResponse('login.html')
+
+
 
 @app.get("/predict_noshow/{patient_id}")
 async def predict_noshow_individual(patient_id: int, username: str = Depends(verify_token)):
@@ -383,8 +411,9 @@ async def predict_noshow_batch(date_start: str, date_end: str, username: str = D
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     
+
 @app.get("/chatbot", response_class=HTMLResponse)
-async def chatbot_page(username: str = Depends(verify_token)):
+async def chatbot_page():
     """
     Serve a página do chatbot
     """

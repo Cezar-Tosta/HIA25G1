@@ -686,6 +686,16 @@
     const API_URL = 'http://127.0.0.1:8000';
     let sessionId = null;
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const tokenFromUrl = urlParams.get('token');
+
+    if (tokenFromUrl) {
+        localStorage.setItem('token', tokenFromUrl);
+        // Optional: remove the token from URL for cleaner appearance
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
+
     // Elementos
     const chatMessages = document.getElementById('chatMessages');
     const messageInput = document.getElementById('messageInput');
@@ -721,6 +731,13 @@
 
     async function predictIndividual() {
         const patientId = document.getElementById('patientId').value;
+        const token = localStorage.getItem('token'); // ou sessionStorage, dependendo de como você salva
+
+        if (!token) {
+            // Redireciona para login
+            window.location.href = '/login2'; 
+            return;
+        }
 
         if (!patientId) {
             alert('Por favor, digite o ID do paciente');
@@ -733,7 +750,14 @@
 
         try {
             // Chamar API de predição
-            const response = await fetch(`${API_URL}/predict_noshow/${patientId}`);
+            const response = await fetch(`${API_URL}/predict_noshow/${patientId}`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+
+
             const data = await response.json();
 
             if (data.error) {
@@ -776,7 +800,14 @@
     async function predictBatch() {
         const dateStart = document.getElementById('batchDateStart').value;
         const dateEnd = document.getElementById('batchDateEnd').value;
+        const token = localStorage.getItem('token'); // ou sessionStorage, dependendo de como você salva
 
+        if (!token) {
+            // Redireciona para login
+            window.location.href = '/login2'; 
+            return;
+        }
+        
         if (!dateStart || !dateEnd) {
             alert('Por favor, selecione o período completo');
             return;
@@ -794,7 +825,12 @@
 
         try {
             // Chamar API de predição em lote (passando intervalo)
-            const response = await fetch(`${API_URL}/predict_noshow_batch?date_start=${dateStart}&date_end=${dateEnd}`);
+            const response = await fetch(`${API_URL}/predict_noshow_batch?date_start=${dateStart}&date_end=${dateEnd}`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            });
             const data = await response.json();
 
             if (data.error) {
@@ -907,6 +943,14 @@ Seja prático. A equipe precisa executar este plano HOJE.
     // ==================== CHAT ====================
 
     async function sendMessageToChat(message) {
+        const token = localStorage.getItem('token'); // ou sessionStorage, dependendo de como você salva
+
+        if (!token) {
+            // Redireciona para login
+            window.location.href = '/login2'; 
+            return;
+        }
+        
         addMessage('user', message);
         
         messageInput.disabled = true;
@@ -919,8 +963,9 @@ Seja prático. A equipe precisa executar este plano HOJE.
             const response = await fetch(`${API_URL}/chat`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                },
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },  
                 body: JSON.stringify({
                     message: message,
                     session_id: sessionId

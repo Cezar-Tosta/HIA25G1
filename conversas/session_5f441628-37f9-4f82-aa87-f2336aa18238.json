@@ -1,0 +1,44 @@
+[
+  {
+    "role": "user",
+    "content": "\n📋 ANÁLISE DE RISCO DE NO-SHOW - PACIENTE #1233\n\nDADOS DA PREDIÇÃO:\n- Probabilidade de falta: NaN%\n- Nível de risco: BAIXO\n\nINFORMAÇÕES DO PACIENTE:\nundefined\n\nFATORES DE RISCO IDENTIFICADOS:\nN/A\n\n🎯 SOLICITAÇÃO:\n\nPor favor, analise este paciente e me forneça:\n\n1. **INTERPRETAÇÃO DO RISCO**: Explique o que significa essa probabilidade de NaN% na prática\n\n2. **RECOMENDAÇÕES DE AÇÃO IMEDIATA**: Sugira ações específicas:\n   - Que tipo de contato fazer? (SMS, ligação, WhatsApp?)\n   - Quando fazer o contato? (48h antes? 24h?)\n   - Que mensagem enviar? (forneça um exemplo prático)\n   - Outras medidas preventivas?\n\n3. **PRIORIZAÇÃO**: Este paciente deve ser contatado com qual urgência?\n\n4. **CUSTO-BENEFÍCIO**: Vale a pena investir em intervenção? Justifique.\n\nSeja específico e acionável. A equipe precisa saber exatamente o que fazer.\n",
+    "timestamp": "2025-10-12T14:37:22.179328",
+    "metadata": {}
+  },
+  {
+    "role": "assistant",
+    "content": "1. **INTERPRETAÇÃO DO RISCO**: A probabilidade de falta (NaN%) indica que não há dados suficientes ou válidos para calcular uma previsão adequada de comparecimento. Isso pode ocorrer devido à falta de histórico de consultas ou a um erro nos dados. Na prática, isso significa que não temos uma base para avaliar a probabilidade desse paciente não comparecer.\n\n2. **RECOMENDAÇÕES DE AÇÃO IMEDIATA**:\n   - **Tipo de contato**: Recomendo um contato via SMS, pois é uma forma rápida e menos intrusiva.\n   - **Quando fazer o contato**: Entre 24h e 48h antes da consulta.\n   - **Mensagem a enviar**: \"Olá, [Nome do Paciente]! Lembramos que você tem uma consulta agendada para [data]. Se precisar de ajuda ou quiser confirmar sua presença, responda a esta mensagem. Agradecemos sua atenção!\"\n   - **Outras medidas preventivas**: Monitorar se o paciente tem um histórico de comparecimento e considerar um acompanhamento mais próximo se houver registros de faltas anteriores.\n\n3. **PRIORIZAÇÃO**: Este paciente deve ser contatado com urgência moderada, dado que o nível de risco é baixo. No entanto, é importante garantir que ele esteja ciente da consulta.\n\n4. **CUSTO-BENEFÍCIO**: Investir em intervenções de contato pode ser justificável, mesmo para um paciente com risco baixo, porque a comunicação pode reduzir a incerteza e aumentar o comparecimento. Estudos mostram que lembretes de consultas podem aumentar o comparecimento em até 30% (Fonte: American Journal of Public Health).\n\nEspero que essas diretrizes ajudem sua equipe a agir de forma eficaz!",
+    "timestamp": "2025-10-12T14:37:33.288981",
+    "metadata": {
+      "agent": "Analista de Dados"
+    }
+  },
+  {
+    "role": "user",
+    "content": "221313",
+    "timestamp": "2025-10-12T14:37:38.998034",
+    "metadata": {}
+  },
+  {
+    "role": "assistant",
+    "content": "1. **INTERPRETAÇÃO DO RISCO**: A probabilidade de falta (NaN%) sugere que não há dados suficientes para prever a ausência do paciente. Isso frequentemente ocorre devido à falta de histórico de consultas ou erro nos dados. Na prática, significa que não podemos avaliar a probabilidade desse paciente não comparecer.\n\n2. **RECOMENDAÇÕES DE AÇÃO IMEDIATA**:\n   - **Tipo de contato**: Recomenda-se uma ligação telefônica 48 horas antes da consulta, seguida de um SMS 24 horas antes.\n   - **Quando fazer o contato**: 48 horas antes para a ligação e 24 horas antes para o SMS.\n   - **Mensagem a enviar**: \n     - Ligação: \"Olá [Nome do Paciente], aqui é [Atendente] da Secretaria de Saúde. Estamos confirmando sua consulta de [especialidade] no dia [data] às [hora]. Você conseguirá comparecer? Caso tenha dificuldades, podemos ajudar com remarcação.\"\n     - SMS: \"Lembrete: Consulta de [especialidade] amanhã às [hora]. Se precisar remarcar, ligue para [telefone]. Sua presença é importante!\"\n   - **Outras medidas preventivas**: Monitorar o histórico de comparecimento do paciente e considerar intervenções adicionais se houver registros de faltas.\n\n3. **PRIORIZAÇÃO**: Este paciente deve ser contatado com urgência moderada, dado que o nível de risco é baixo, mas é importante garantir que ele esteja ciente da consulta.\n\n4. **CUSTO-BENEFÍCIO**: Investir em intervenções de contato é justificável, pois pode aumentar a taxa de comparecimento e reduzir custos associados a consultas não realizadas. A ligação e o SMS são ações de baixo custo que podem ter um impacto significativo na redução do no-show.\n\nEspero que essas recomendações ajudem sua equipe a agir de forma eficaz!",
+    "timestamp": "2025-10-12T14:37:57.089586",
+    "metadata": {
+      "agent": "Assistente de Pesquisa"
+    }
+  },
+  {
+    "role": "user",
+    "content": "\n📋 ANÁLISE DE RISCO DE NO-SHOW - PACIENTE #1244\n\nDADOS DA PREDIÇÃO:\n- Probabilidade de falta: NaN%\n- Nível de risco: BAIXO\n\nINFORMAÇÕES DO PACIENTE:\nundefined\n\nFATORES DE RISCO IDENTIFICADOS:\nN/A\n\n🎯 SOLICITAÇÃO:\n\nPor favor, analise este paciente e me forneça:\n\n1. **INTERPRETAÇÃO DO RISCO**: Explique o que significa essa probabilidade de NaN% na prática\n\n2. **RECOMENDAÇÕES DE AÇÃO IMEDIATA**: Sugira ações específicas:\n   - Que tipo de contato fazer? (SMS, ligação, WhatsApp?)\n   - Quando fazer o contato? (48h antes? 24h?)\n   - Que mensagem enviar? (forneça um exemplo prático)\n   - Outras medidas preventivas?\n\n3. **PRIORIZAÇÃO**: Este paciente deve ser contatado com qual urgência?\n\n4. **CUSTO-BENEFÍCIO**: Vale a pena investir em intervenção? Justifique.\n\nSeja específico e acionável. A equipe precisa saber exatamente o que fazer.\n",
+    "timestamp": "2025-10-12T14:37:57.102950",
+    "metadata": {}
+  },
+  {
+    "role": "assistant",
+    "content": "1. **INTERPRETAÇÃO DO RISCO**: A probabilidade de falta (NaN%) indica que não há dados suficientes sobre o paciente #1244 para prever se ele faltará ou não. Isso pode ser devido à ausência de histórico de consultas ou a falhas na coleta de dados. Na prática, significa que não conseguimos avaliar se esse paciente tem um risco elevado ou baixo de não comparecimento.\n\n2. **RECOMENDAÇÕES DE AÇÃO IMEDIATA**:\n   - **Tipo de contato**: Recomendo uma ligação telefônica 48 horas antes da consulta, seguida de um SMS 24 horas antes.\n   - **Quando fazer o contato**: 48 horas antes para a ligação e 24 horas antes para o SMS.\n   - **Mensagem a enviar**:\n     - **Ligação**: \"Olá [Nome do Paciente], aqui é [Atendente] da Secretaria de Saúde. Estamos confirmando sua consulta de [especialidade] no dia [data] às [hora]. Você conseguirá comparecer? Caso tenha dificuldades, podemos ajudar com remarcação.\"\n     - **SMS**: \"Lembrete: Consulta de [especialidade] amanhã às [hora]. Se precisar remarcar, ligue para [telefone]. Sua presença é importante!\"\n   - **Outras medidas preventivas**: Avaliar se há histórico de faltas em consultas anteriores e considerar um acompanhamento mais próximo.\n\n3. **PRIORIZAÇÃO**: Este paciente deve ser contatado com urgência moderada. Embora o nível de risco seja baixo, é essencial que ele esteja ciente da consulta.\n\n4. **CUSTO-BENEFÍCIO**: Vale a pena investir em intervenções de contato, pois a comunicação proativa pode aumentar as taxas de comparecimento. Estudos mostram que lembretes podem aumentar a taxa de comparecimento em até 30% (Fonte: American Journal of Public Health). A ligação e o SMS são medidas de custo relativamente baixo que podem resultar em melhorias significativas na adesão às consultas.\n\nEspero que essas orientações ajudem sua equipe a agir de maneira eficaz!",
+    "timestamp": "2025-10-12T14:38:07.806367",
+    "metadata": {
+      "agent": "Analista de Dados"
+    }
+  }
+]
